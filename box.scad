@@ -1,5 +1,5 @@
-debug = true;
-$fn = 64; // Edge faces
+debug = false;
+$fn = 16; // Edge faces
 $radius = rands(1,16,1)[0]; // Radius of edge curves
 $thick = rands(1,8,1)[0]; // Thickness of parts
 $insert_height = 0.500; // 20% will be lid/insert, 80% receiver  -- Safe range: 0.3 to 0.75 or so?
@@ -14,7 +14,7 @@ receiver_size = [50,50,70];
 echo("[[[[ ", $radius, " ||||", $thick, " ]]]]");
 
 display_skew = 1.0; // How many mm apart we hold the box and lid when displaying it or for printing
-$print_mode = true;
+$print_mode = false;
 
 // ######### Computed values 
 // lip_width is how deep the lip can be 
@@ -27,9 +27,6 @@ insert_size = [receiver_size[0], receiver_size[1], receiver_size[2]*$insert_heig
 // When we make lip corners this is how far in/out we move the profile to get a correct inside curve
 radius_width_padding = $radius - $thick - $lip_width; 
 lip_corner_width = radius_width_padding + $thick;
-
-
-    
 
 echo("lip_width=",$lip_width);
 echo("lip_corner_width=",lip_corner_width);

@@ -1,9 +1,9 @@
-//include <nutsnbolts/cyl_head_bolt.scad>
+include <nutsnbolts/cyl_head_bolt.scad>
 
-design_mode = true;
+design_mode = false;
 show_components = false;
 assembled = true;
-part = "top_board";  // power_board top_board chassis motor_arm_a motor_arm_b camera_tray
+part = "back_piece";  // power_board top_board chassis motor_arm_a motor_arm_b camera_tray back_piece
 
 faa_drone_id="FA11AA1AAA";
 fpv_camera = true;
